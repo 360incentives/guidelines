@@ -8,6 +8,7 @@ modifications and extras.
 
 - [Source Code Layout](#source-code-layout)
 - [Classes & Modules](#classes--modules)
+- [Strings](#strings)
 
 ## Source Code Layout
 
