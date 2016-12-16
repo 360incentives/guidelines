@@ -5,6 +5,6 @@ not exhaustive but should provide a starting point for most situations.
 
 ## Guides
 
-- Ruby [TODO]
+- [Ruby](ruby.md)
 - RSpec [TODO]
 - Javascript [TODO]
