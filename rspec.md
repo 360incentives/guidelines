@@ -11,7 +11,10 @@ points from that.
 - Only use the [`expect`](http://betterspecs.org/#expect) and
   `is_expected.to` syntax
 - Create only the [data you need](http://betterspecs.org/#data)
-- Avoid talking to the database if possible. Use mocks and non-persisted objects
+- In unit tests, avoid touching the database, objects should be built in memory
+- Never mock the object under test, only object which it talks to
+- Use shared examples carefully. [Duplication is far cheaper than the wrong
+  abstraction](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction)
 
 ## Syntax
 
