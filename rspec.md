@@ -12,8 +12,9 @@ points from that.
   `is_expected.to` syntax
 - Create only the [data you need](http://betterspecs.org/#data)
 - In unit tests, avoid touching the database, objects should be built in memory
-- Never mock the object under test, only object which it talks to
-- Use shared examples carefully. [Duplication is far cheaper than the wrong
+- Never mock the object under test, only objects which it talks to
+- Use shared examples carefully and only where it makes sense. [Duplication is
+  far cheaper than the wrong
   abstraction](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction)
 
 ## Syntax
@@ -73,3 +74,17 @@ points from that.
   The difference between `before` and `let`/`expect` is due to how it reads.
   e.g `let(:foo) { :bar }` reads like 'let foo be equal to bar' whereas
   `before do something; end` reads like 'before the test, do this thing'.
+
+- Extract hardcoded values to well-named `let` blocks, in the same manner as
+  constants
+
+  ```ruby
+  # bad
+  expect(1 + 2).to eq(3)
+
+  # good
+  subject { 1 + 2 }
+  let(:expected_result) { 3 }
+
+  it { is_expected.to eq(expected_result)}
+  ```
