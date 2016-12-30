@@ -6,5 +6,5 @@ not exhaustive but should provide a starting point for most situations.
 ## Guides
 
 - [Ruby](ruby.md)
-- RSpec [TODO]
+- [RSpec](rspec.md)
 - Javascript [TODO]
