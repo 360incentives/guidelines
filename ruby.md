@@ -15,7 +15,8 @@ modifications and extras.
 Everything from [here](https://github.com/bbatsov/ruby-style-guide#source-code-layout)
 and these points.
 
-- Avoid using local variables where possible; prefer extracting a method
+- <a name="avoid-locals"></a>Avoid using local variables where possible; prefer
+  extracting a method <sup>[[link](#avoid-locals)]</sup>
 
   ```ruby
   # bad
@@ -46,8 +47,8 @@ and these points.
   end
   ```
 
-- Avoid assigning a variable in a conditional;
-  prefer extraction of a well-named method
+- <a name="conditional-assignment"></a>Avoid assigning a variable in a conditional;
+  prefer extraction of a well-named method <sup>[[link](#conditional-assignment)]</sup>
 
   ```ruby
   # bad
@@ -79,8 +80,9 @@ and these points.
 
   puts some_variable_value
   ```
-- Avoid method chaining if intermediate values have their own meaning; prefer
-  extracting a method
+- <a name="method-chaining"></a>Avoid method chaining if intermediate values
+  have their own meaning; prefer extracting a method
+  <sup>[[link](#method-chaining)]</sup>
 
   ```ruby
   # ok
@@ -102,8 +104,9 @@ and these points.
   incremented_array
   ```
 
-- When method chaining requires multiple lines, put each chained method on it's
-  own line with a leading `.`
+- <a name="method-chaining-multi"></a>When method chaining requires multiple
+  lines, put each chained method on it's own line with a leading `.`
+  <sup>[[link](#method-chaining-multi)]</sup>
 
   ```ruby
   # ok
@@ -117,8 +120,9 @@ and these points.
     .four
   ```
 
-- When a method call or array definition require multiple lines, put each
-  parameter on it's own line.
+- <a name="multiline"></a>When a method call or array definition require
+  multiple lines, put each parameter on it's own line.
+  <sup>[[link](#multiline)]</sup>
 
   ```ruby
   # bad
@@ -147,7 +151,8 @@ and these points.
 Everything from [here](https://github.com/bbatsov/ruby-style-guide#classes--modules)
 and these points.
 
-- Prefer private attr_readers over explicit use of instance variables
+- <a name="private-attr"></a>Prefer private attr_readers over explicit use of
+  instance variables <sup>[[link](#private-attr)]</sup>
 
   ```ruby
   class Foo
@@ -175,5 +180,6 @@ and these points.
 Everything from [here](https://github.com/bbatsov/ruby-style-guide#strings)
 and these points.
 
-- Single quotes by default. Option A in [the style
+- <a name="single-quotes"></a>Single quotes by default. Option A in [the style
   guide](https://github.com/bbatsov/ruby-style-guide#consistent-string-literals)
+  <sup>[[link](#single-quotes)]</sup>

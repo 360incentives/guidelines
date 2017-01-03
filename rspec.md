@@ -19,8 +19,9 @@ points from that.
 
 ## Syntax
 
-- `let` blocks should use multiple line `{ }` proc syntax. `{ }` syntax is less
-  distracting than `do end`
+- <a name="multi-line-let"></a>`let` blocks should use multiple line `{ }` proc
+  syntax. `{ }` syntax is less distracting than `do end`
+  <sup>[[link](#multi-line-let)]</sup>
 
   ```ruby
   # Bad
@@ -37,7 +38,8 @@ points from that.
   let(:baz) { 'baz' }
   ```
 
-- Use `{ }` blocks for expectations
+- <a name="expect-blocks"></a>Use `{ }` blocks for expectations
+  <sup>[[link](#expect-blocks)]</sup>
 
   ```ruby
   # bad
@@ -54,7 +56,8 @@ points from that.
   }.to change(Something, :else)
   ```
 
-- Use `do end` for `before` blocks
+- <a name="do-end-before"></a>Use `do end` for `before` blocks
+  <sup>[[link](#do-end-before)]</sup>
 
   ```ruby
   # bad
@@ -75,8 +78,9 @@ points from that.
   e.g `let(:foo) { :bar }` reads like 'let foo be equal to bar' whereas
   `before do something; end` reads like 'before the test, do this thing'.
 
-- Extract hardcoded values to well-named `let` blocks, in the same manner as
-  constants
+- <a name="extract-hardcoded"></a>Extract hardcoded values to well-named `let`
+  blocks, in the same manner as constants
+  <sup>[[link](#extract-hardcoded)]</sup>
 
   ```ruby
   # bad
