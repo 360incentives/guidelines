@@ -19,6 +19,12 @@ contain build braking code.
 When ready to start development branch out from `master`
 
 ```
+git checkout master
+git pull
+git checkout -b feature/#1234-strong-passwords
+```
+
+```
 Master  *-*-*
              \
 Feature       \-*-*-*-*
