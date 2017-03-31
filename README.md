@@ -7,4 +7,3 @@ not exhaustive but should provide a starting point for most situations.
 
 - [Ruby](ruby.md)
 - [RSpec](rspec.md)
-- Javascript [TODO]

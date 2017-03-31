@@ -86,7 +86,7 @@ and these points.
 
   ```ruby
   # ok
-  [1, 2, '3', nil].select { |val| val.is_a?(Integer) }.map { |val| val + 1 }
+  [1, 2, '3', nil].select { |val| val.is_a?(Fixnum) }.map { |val| val + 1 }
 
   # better
   def raw_array
