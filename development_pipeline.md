@@ -47,4 +47,4 @@ show them the completed work to make sure it meets their expectations
 complete the requested changes then move through steps 3 to 6 again)
 
 ### Step 8: Deploy
--[See our Git workflow](http://github.com/CreatekIO/guidelines/blob/master/git_workflow.md)
+- [See our Git workflow](http://github.com/CreatekIO/guidelines/blob/master/git_workflow.md)
