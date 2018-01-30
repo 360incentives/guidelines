@@ -68,6 +68,15 @@ develop     --------------------m---m---m----------
 To create the release branch and PR you can either use [relsr](https://github.com/jcleary/relsr) on the command-line or allow [flightplan](https://flightplan.createl.io) to create
 them for you on the deployment schedule (currently PR at 10:15, merge at 10:30 daily).
 
+### Naming convention
+Use the following naming convention:
+- Features : `feature/#1234-number-feature-title`
+- Bug: `bug/#1234-bug-title`
+- Technical: `technical/#1234-technical-issue-title`
+- Grouped Issues: `group/#1234-group-title`
+- Rework: `rework/1234-issue-title-rework-1` <= note lack of # in branch name
+- Release: `release/yyyymmdd-hhmmss` (auto created by relsr / flightplan)
+
 ### Resolving Conflicts
 If GitHub warns you of conflicts in your PR, resolve the conflicts by merging your branch into develop on the command line. 
 Do not use the GitHub tools or the command line to merge `develop` into your branch as this will create deployment dependencies. 
@@ -98,5 +107,5 @@ From time to time it may become necessary to deploy certain features together. I
 1. Merge all the feature branches into the group branch.
 1. Close the original issues.
 1. When you're ready to deploy the entire group, you will be able to create a PR for the group branch to `master`
-1. If rework is required on any of the issues in the group, use the Rework process above for the group issue.
+1. If rework is required on any of the issues in the group, use the Rework process above for the group issue (branch out of and PR back into the `group/#` branch)
 
