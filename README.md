@@ -11,4 +11,5 @@ not exhaustive but should provide a starting point for most situations.
 
 ## Processes
 
+- [Git Workflow](git-workflow.md)
 - [Dealing with Non-Deterministic Tests](dealing-with-non-deterministic-tests.md)
