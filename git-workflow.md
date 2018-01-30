@@ -1,7 +1,7 @@
 # Git Workflow
 
 ## Stable Branches
-- `master` - used for production. Must stay stable at all time. Contains the release history.
+- `master` - used for production. Must stay stable at all time. Contains the production release history.
 - `develop` - used for staging. Contains the development edge.
 - `fastlane` - used for fastlane. Contains the development edge for an epic.
 
@@ -9,11 +9,11 @@
 All development work should be done in a dedicated branch. This 
 makes it easy for multiple developers to work on a particular feature without 
 disturbing the main codebase. It also means the `master` branch will never 
-contain build braking code. 
+contain build breaking code. 
 
 ## Workflow
 ### Development
-When ready to start development branch out from `master`
+When you're ready to start development branch out from `master`
 
 ```
 git checkout master
@@ -69,8 +69,8 @@ To create the release branch and PR you can either use [relsr](https://github.co
 them for you on the deployment schedule (currently PR at 10:15, merge at 10:30 daily).
 
 ### Resolving Conflicts
-If GutHub warns you of conflicts in your PR, resolve the conflicts by merging your branch into develop on the command line. 
-Do you use the GutHub tools or the command line to merge develop into your branch as this will create deployment dependencies. 
+If GitHub warns you of conflicts in your PR, resolve the conflicts by merging your branch into develop on the command line. 
+Do not use the GitHub tools or the command line to merge `develop` into your branch as this will create deployment dependencies. 
 The process looks like this:
 ```bash
 git checkout develop
@@ -97,5 +97,6 @@ From time to time it may become necessary to deploy certain features together. I
 1. Create a branch for the issue ( e.g. `group/#5678-languages-and-react` )
 1. Merge all the feature branches into the group branch.
 1. Close the original issues.
-1. When ready to deploy the entire group, you will be able to create a PR for the group branch to `master`
+1. When you're ready to deploy the entire group, you will be able to create a PR for the group branch to `master`
+1. If rework is required on any of the issues in the group, use the Rework process above for the group issue.
 
