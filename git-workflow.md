@@ -97,7 +97,7 @@ When you push develop, GitHub will close the PR for you automatically.
 1. Create a rework branch without the # (e.g rework/1234-fix-breaking-test-part-1)
 1. When ready, open the PR back to the original branch - this will ensure the PR is just for the most recent changes.
 1. After the PR is merged, manually merge the feature branch back into `develop` to get your changes on to Staging.
-1. If there is subsequent rework, repeat the above steps, creating a new rework branch.
+1. If there is subsequent rework, repeat the above steps, creating a new rework branch (e.g. rework/1234-fix-breaking-test-part-2)
 
 ### Special Workflow (Grouping Issues)
 From time to time it may become necessary to deploy certain features together. In these cases please ensure you follow the special workflow:
