@@ -2,11 +2,11 @@
 
 ## Stable Branches
 - `master` - used for production. Must stay stable at all time. Contains the production release history.
-- `develop` - used for staging. Contains the development edge.
-- `fastlane` - used for fastlane. Contains the development edge for an epic.
+- `develop` - used for staging. Contains the development edge. 
+- `fastlane` - used for fastlane. Contains the development edge for an epic. 
 
 ## Development branches
-All development work should be done in a dedicated branch. This 
+All development work must be done in a dedicated branch. This 
 makes it easy for multiple developers to work on a particular feature without 
 disturbing the main codebase. It also means the `master` branch will never 
 contain build breaking code. 
@@ -65,7 +65,7 @@ bug/#b                    \-*-*   \   \
 develop     --------------------m---m---m----------
 ```
 
-To create the release branch and PR you can either use [relsr](https://github.com/jcleary/relsr) on the command-line or allow [flightplan](https://flightplan.createl.io) to create
+To create the release branch and PR you can either use [relsr](https://github.com/jcleary/relsr) on the command-line or allow [flightplan](https://flightplan.createk.io) to create
 them for you on the deployment schedule (currently PR at 10:15, merge at 10:30 daily).
 
 ### Naming convention
