@@ -45,7 +45,7 @@ develop     ----------------m
 ### Production
 Deployments to production are completed by creating a release branch from master and
 successively merging the selected\* feature branches into the release branch. This allows features
-to be 'cherry-picked' into production without having to wait for all features in develop
+to be 'cherry-picked' into production without having to wait for all features in `develop`
 to receive Product Owner approval. 
 
 \**Waffle is currently used to to mark issues by adding them to the "Deploying" column. Both relsr and flightplan use the
@@ -74,11 +74,10 @@ Use the following naming convention:
 - Bug: `bug/#1234-bug-title`
 - Technical: `technical/#1234-technical-issue-title`
 - Grouped Issues: `group/#1234-group-title`
-- Rework: `rework/1234-issue-title-rework-1` <= note lack of # in branch name
 - Release: `release/yyyymmdd-hhmmss` (auto created by relsr / flightplan)
 
 ### Resolving Conflicts
-If GitHub warns you of conflicts in your PR, resolve the conflicts by merging your branch into develop on the command line. 
+If GitHub warns you of conflicts in your PR, resolve the conflicts by merging your branch into `develop` on the command line. 
 Do not use the GitHub tools or the command line to merge `develop` into your branch as this will create deployment dependencies. 
 The process looks like this:
 ```bash
@@ -90,14 +89,10 @@ git commit
 git push
 ```
 
-When you push develop, GitHub will close the PR for you automatically. 
+When you push to `develop`, GitHub will close the PR for you automatically. 
 
 ### Rework
-1. Pull the original branch
-1. Create a rework branch without the # (e.g rework/1234-fix-breaking-test-part-1)
-1. When ready, open the PR back to the original branch - this will ensure the PR is just for the most recent changes.
-1. After the PR is merged, manually merge the feature branch back into `develop` to get your changes on to Staging.
-1. If there is subsequent rework, repeat the above steps, creating a new rework branch (e.g. rework/1234-fix-breaking-test-part-2)
+Rework should be performed on the original branch - do not create a new branch. When the rework is finished, create a PR back to `develop` as per the normal workflow.
 
 ### Special Workflow (Grouping Issues)
 From time to time it may become necessary to deploy certain features together. In these cases please ensure you follow the special workflow:
@@ -107,5 +102,5 @@ From time to time it may become necessary to deploy certain features together. I
 1. Merge all the feature branches into the group branch.
 1. Close the original issues.
 1. When you're ready to deploy the entire group, you will be able to create a PR for the group branch to `master`
-1. If rework is required on any of the issues in the group, use the Rework process above for the group issue (branch out of and PR back into the `group/#` branch)
+1. If rework is required on *any* of the issues in the group ensure that the work is applied to the new group branch, and the PR is back to `develop`.
 
