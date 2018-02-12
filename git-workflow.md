@@ -97,7 +97,7 @@ Rework should be performed on the original branch - do not create a new branch. 
 ### Special Workflow (Grouping Issues)
 From time to time it may become necessary to deploy certain features together. In these cases please ensure you follow the special workflow:
 
-1. Create a issue for combining the features. (e.g. Issue 5678 - Languages and React Group Deployment), referencing the original issues in the description.
+1. Create a issue for combining the features. (e.g. Issue 5678 - Languages and React Group Deployment), referencing the original issues in the description using the GitHub "Duplicate of #issue_no" notation.
 1. Create a branch for the issue ( e.g. `group/#5678-languages-and-react` )
 1. Merge all the feature branches into the group branch.
 1. Close the original issues.
