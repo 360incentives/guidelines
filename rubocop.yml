@@ -2,6 +2,10 @@ AllCops:
   Exclude:
     - 'db/**/*'
 
+inherit_mode:
+  merge:
+    - 'Exclude'
+
 
 Layout/EndAlignment:
   EnforcedStyleAlignWith: 'variable'
