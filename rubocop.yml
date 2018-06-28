@@ -99,6 +99,13 @@ Style/AndOr:
 
 Style/BlockDelimiters:
   EnforcedStyle: 'semantic'
+  IgnoredMethods:
+    - it
+    - lambda
+    - proc
+    # Rails Controller `format` methods in `respond_to` blocks
+    - html
+    - js
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: 'compact'
