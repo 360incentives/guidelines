@@ -2,6 +2,8 @@
 AllCops:
   Exclude:
     - 'db/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
 
 inherit_mode:
   merge:
