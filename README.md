@@ -3,6 +3,9 @@
 These guidelines should be used when writing any code for Createk. This list is
 not exhaustive but should provide a starting point for most situations.
 
+## Learning Resources
+- [Learning Ruby](learning_ruby.md)
+
 ## Guides
 
 - [Ruby](ruby.md)
