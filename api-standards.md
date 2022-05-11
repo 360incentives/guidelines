@@ -162,7 +162,9 @@ have deprecated a few*
 
 ### "update"
 
-- Accepts JSON object representation of resource, and returns the same
+- Accepts partial JSON object representation of resource, and returns full
+  representation (this should be the same representation as ["show"](#show))
+  - Only send fields that need to be changed, but accept other fields
 - Response should ideally be able to sent back to the endpoint unchanged in
   JSON structure
 
