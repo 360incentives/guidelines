@@ -78,6 +78,9 @@ Of the two, MyRewards should be considered the more mature and thus
   other suitable formats if they can be parsed unambiguously (*this is largely
   a historical rule, rooted in the UK-centric origin of our apps, and something
   we should probably stop*)
+  - Return ISO8601-formatted strings for dates/datetimes, regardless of stack or
+    consumer locale
+  - ...with UTC timezone? (this needs to be checked as to whether we do this)
 - Prefer arrays of objects (with an `id` key) for collections of things, over
   objects keyed by `id` or another property
 
