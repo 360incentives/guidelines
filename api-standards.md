@@ -148,6 +148,10 @@ have deprecated a few*
 - Endpoints accepting multiple resources are allowed (this is a pragmatic
   diversion from 'pure' REST), but should be separate from the
   singular-resource-accepting endpoint
+- Additional JSON keys that either don't apply to the resource (i.e. there's no
+  database column for them), or the user doesn't have permission to set, should
+  be ignored
+  - This is a Rails default, which we don't change
 
 ### "show"
 
