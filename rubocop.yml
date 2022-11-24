@@ -2,6 +2,8 @@
 AllCops:
   Exclude:
     - 'db/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
 
 inherit_mode:
   merge:
@@ -99,6 +101,19 @@ Style/AndOr:
 
 Style/BlockDelimiters:
   EnforcedStyle: 'semantic'
+  Exclude:
+    - 'spec/*_helper.rb'
+    - 'spec/factories/**/*.rb'
+    - 'spec/support/factories/**/*.rb'
+    - 'spec_legacy/factory_girl/**/*.rb'
+  IgnoredMethods:
+    - it
+    - default_scope
+    - lambda
+    - proc
+    # Rails Controller `format` methods in `respond_to` blocks
+    - html
+    - js
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: 'compact'
