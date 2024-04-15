@@ -133,5 +133,5 @@ Style/RescueStandardError:
 Style/TernaryParentheses:
   EnforcedStyle: 'require_parentheses_when_complex'
 
-Layout:
+Layout/LineLength:
   Max: 120
