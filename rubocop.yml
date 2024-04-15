@@ -1,12 +1,16 @@
-# Targets version 0.55.0
+# Targets version 1.29.1
+require:
+  - rubocop-performance
+
 AllCops:
+  NewCops: enable
   Exclude:
     - 'db/**/*'
+    - '.buildkite/**/*'
 
 inherit_mode:
   merge:
     - 'Exclude'
-
 
 Layout/EndAlignment:
   EnforcedStyleAlignWith: 'variable'
@@ -14,10 +18,10 @@ Layout/EndAlignment:
 Layout/FirstParameterIndentation:
   EnforcedStyle: 'consistent'
 
-Layout/IndentArray:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: 'consistent'
 
-Layout/IndentHash:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: 'consistent'
 
 Layout/MultilineArrayBraceLayout:
@@ -53,7 +57,7 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*_spec.rb'
     - 'spec_legacy/**/*_spec.rb'
-  ExcludedMethods: []
+  IgnoredMethods: []
 
 Metrics/ClassLength:
   Max: 300
@@ -78,7 +82,7 @@ Naming/PredicateName:
   NamePrefix:
     - 'is_'
     - 'have_'
-  NamePrefixBlacklist:
+  ForbiddenPrefixes:
     - 'is_'
     - 'have_'
 
@@ -129,5 +133,5 @@ Style/RescueStandardError:
 Style/TernaryParentheses:
   EnforcedStyle: 'require_parentheses_when_complex'
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
