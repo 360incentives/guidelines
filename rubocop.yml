@@ -1,47 +1,51 @@
 # Targets version 0.55.0
+require:
+  - rubocop-performance
+
 AllCops:
+  NewCops: enable
   Exclude:
-    - 'db/**/*'
+    - "db/**/*"
+    - ".buildkite/**/*"
 
 inherit_mode:
   merge:
-    - 'Exclude'
-
+    - "Exclude"
 
 Layout/EndAlignment:
-  EnforcedStyleAlignWith: 'variable'
+  EnforcedStyleAlignWith: "variable"
 
 Layout/FirstParameterIndentation:
-  EnforcedStyle: 'consistent'
+  EnforcedStyle: "consistent"
 
-Layout/IndentArray:
-  EnforcedStyle: 'consistent'
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: "consistent"
 
-Layout/IndentHash:
-  EnforcedStyle: 'consistent'
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: "consistent"
 
 Layout/MultilineArrayBraceLayout:
-  EnforcedStyle: 'new_line'
+  EnforcedStyle: "new_line"
 
 Layout/MultilineHashBraceLayout:
-  EnforcedStyle: 'new_line'
+  EnforcedStyle: "new_line"
 
 Layout/MultilineMethodCallBraceLayout:
-  EnforcedStyle: 'new_line'
+  EnforcedStyle: "new_line"
 
 Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: 'indented'
+  EnforcedStyle: "indented"
 
 Layout/MultilineOperationIndentation:
-  EnforcedStyle: 'indented'
+  EnforcedStyle: "indented"
 
 Layout/SpaceInLambdaLiteral:
-  EnforcedStyle: 'require_space'
+  EnforcedStyle: "require_space"
 
 Lint/AmbiguousBlockAssociation:
   Exclude:
-    - 'spec/**/*_spec.rb'
-    - 'spec_legacy/**/*_spec.rb'
+    - "spec/**/*_spec.rb"
+    - "spec_legacy/**/*_spec.rb"
 
 Lint/Void:
   CheckForMethodsWithNoSideEffects: true
@@ -51,9 +55,9 @@ Metrics/AbcSize:
 
 Metrics/BlockLength:
   Exclude:
-    - 'spec/**/*_spec.rb'
-    - 'spec_legacy/**/*_spec.rb'
-  ExcludedMethods: []
+    - "spec/**/*_spec.rb"
+    - "spec_legacy/**/*_spec.rb"
+  IgnoredMethods: []
 
 Metrics/ClassLength:
   Max: 300
@@ -76,14 +80,14 @@ Naming/AccessorMethodName:
 
 Naming/PredicateName:
   NamePrefix:
-    - 'is_'
-    - 'have_'
-  NamePrefixBlacklist:
-    - 'is_'
-    - 'have_'
+    - "is_"
+    - "have_"
+  ForbiddenPrefixes:
+    - "is_"
+    - "have_"
 
 Naming/VariableNumber:
-  EnforcedStyle: 'snake_case'
+  EnforcedStyle: "snake_case"
 
 Performance/RedundantMerge:
   MaxKeyValuePairs: 1
@@ -92,42 +96,42 @@ Performance/TimesMap:
   AutoCorrect: true
 
 Style/Alias:
-  EnforcedStyle: 'prefer_alias_method'
+  EnforcedStyle: "prefer_alias_method"
 
 Style/AndOr:
-  EnforcedStyle: 'conditionals'
+  EnforcedStyle: "conditionals"
 
 Style/BlockDelimiters:
-  EnforcedStyle: 'semantic'
+  EnforcedStyle: "semantic"
 
 Style/ClassAndModuleChildren:
-  EnforcedStyle: 'compact'
+  EnforcedStyle: "compact"
 
 Style/Documentation:
   Enabled: false
 
 Style/Lambda:
-  EnforcedStyle: 'literal'
+  EnforcedStyle: "literal"
 
 Style/Next:
-  EnforcedStyle: 'always'
+  EnforcedStyle: "always"
 
 Style/ParenthesesAroundCondition:
   Enabled: false
 
 Style/PercentLiteralDelimiters:
   PreferredDelimiters:
-    default: '[]'
-    '%r': '{}'
+    default: "[]"
+    "%r": "{}"
 
 Style/RegexpLiteral:
-  EnforcedStyle: 'mixed'
+  EnforcedStyle: "mixed"
 
 Style/RescueStandardError:
-  EnforcedStyle: 'implicit'
+  EnforcedStyle: "implicit"
 
 Style/TernaryParentheses:
-  EnforcedStyle: 'require_parentheses_when_complex'
+  EnforcedStyle: "require_parentheses_when_complex"
 
-Metrics/LineLength:
+Layout:
   Max: 120
