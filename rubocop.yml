@@ -86,6 +86,9 @@ Naming/PredicateName:
     - 'is_'
     - 'have_'
 
+Naming/RescuedExceptionsVariableName:
+  PreferredName: 'error'
+
 Naming/VariableNumber:
   EnforcedStyle: 'snake_case'
 
