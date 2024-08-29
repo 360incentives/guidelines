@@ -113,6 +113,9 @@ Style/ClassAndModuleChildren:
 Style/Documentation:
   Enabled: false
 
+Style/FetchEnvVar:
+  Enabled: false
+
 Style/Lambda:
   EnforcedStyle: 'literal'
 
